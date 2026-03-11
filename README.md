@@ -1,100 +1,114 @@
+# Nithin Cherukumalli
+### AI Systems Engineer — LLM Infrastructure · RAG Architecture · Agentic AI
 
-# **👋 Hi, I'm Nithin cherukumalli!**  
-
-🚀 **Full-Stack Data Scientist | Data Engineer | AI Engineer | MLOPs Enthusiast**  
-
-💡 Passionate about **AI, NLP, LLMs, and scalable data-driven solutions**.  
-🔍 Exploring **cutting-edge AI/ML innovations & data engineering best practices**.  
-📊 Love building **end-to-end AI solutions**—from **data pipelines to model deployment**.  
+Currently the sole AI engineer for the **Government of Andhra Pradesh** — designing and operating production AI systems on an air-gapped network where data security, retrieval accuracy, and system reliability are non-negotiable.
 
 ---
 
-## **🔥 What I Do**  
+## What I Build
 
-I specialize in **solving real-world problems** by combining **Data Science, Machine Learning, and Data Engineering**. My expertise includes:  
+I specialise in the infrastructure layer of AI systems — not just calling APIs, but engineering the retrieval pipelines, inference serving, multi-tenant architectures, and governance layers that make LLM systems work reliably in production.
 
-### **🧠 Generative AI & NLP**  
-- Building **Large Language Model (LLM) applications** (e.g., GPT, LLaMA, Mistral, Falcon).  
-- Developing **Retrieval-Augmented Generation (RAG)** applications for intelligent assistants.  
-- Fine-tuning transformer models for text classification, summarization, and Q&A.  
-- Implementing **chatbots** and conversational AI using LangChain, OpenAI APIs, and vector databases.  
-
-### **📊 Machine Learning & Analytics**  
-- Building **customer insights & recommendation systems** for e-commerce and retail.  
-- Forecasting trends and predicting outcomes using **time series modeling**.  
-- Designing **anomaly detection models** for fraud detection and cybersecurity.  
-- Using MLflow and DVC for **model tracking, experiment logging, and versioning**.  
-
-### **🏗️ Data Engineering & Warehousing**  
-- Designing **ETL/ELT pipelines** to process large-scale structured and unstructured data.  
-- Setting up **Data Warehouses** using **Snowflake, AWS Redshift, and Azure Synapse**.  
-- Orchestrating **Apache Airflow** workflows for efficient data pipeline automation.  
-- Building **real-time streaming data solutions** with Kafka and Spark.  
-
-### **⚙️ MLOps & Model Deployment**  
-- Deploying ML models on **AWS SageMaker, Azure ML, and Hugging Face Spaces**.  
-- Setting up **CI/CD pipelines for ML workflows** using Docker, Kubernetes, and GitHub Actions.  
-- Monitoring deployed models with **Grafana, Prometheus, and Evidently AI**.  
-- Implementing feature stores for model performance enhancement.  
-
-### **👀 Computer Vision**  
-- Object detection & tracking using **YOLO, Faster R-CNN, and OpenCV**.  
-- Image classification and segmentation for medical, retail, and security applications.  
-- Optical Character Recognition (OCR) using **Tesseract and EasyOCR**.  
+**Current focus areas:**
+- Production RAG systems with hybrid retrieval, reranking pipelines, and evaluation frameworks
+- On-premise LLM inference serving (vLLM, pgvector, air-gapped deployments)
+- Multi-tenant AI platforms with strict data isolation and audit logging
+- Agentic AI systems using LangGraph for complex multi-step workflows
 
 ---
 
-## **📌 Featured Projects**  
+## Production Systems
 
-🔹 **[Research Buddy](https://github.com/your-repo)** – AI-powered research assistant with **LLM-enhanced query understanding, memory integration, and RAG-based search**.  
-🔹 **Customer Shopping Insights** – Machine learning models for **customer behavior analysis & personalized recommendations**.  
-🔹 **End-to-End MLOps Pipeline** – A **scalable ML workflow with Airflow, MLflow, and Docker**, deployed on AWS.  
-🔹 **Data Warehouse Setup** – **Snowflake-based data lakehouse implementation** for enterprise analytics.  
-🔹 **Autonomous Chatbot System** – A **conversational AI chatbot with dynamic response generation**.  
+### PolicyCrafter — Government RAG Platform
+> Live system · Government of Andhra Pradesh · Air-gapped network
 
----
+Processing **10,000+ official government documents** — orders, amendments, circulars, and regulatory notices — with full versioning, supersession tracking, and legal lineage management.
 
-## **🛠️ Tech Stack & Tools**  
+**Architecture highlights:**
+- Hybrid BM25 + dense vector retrieval fused with **Reciprocal Rank Fusion (RRF)**
+- Three-stage reranking: cross-encoder → LLM-as-judge → MMR diversity reranking
+- Local LLM inference via **vLLM** on **RTX 5090** (32GB VRAM) — KV cache optimised, continuous batching
+- **PostgreSQL + pgvector** — zero data leaves the local network
+- Full audit trail: provenance tracking, clause-level citations, confidence scoring
 
-### **Languages & Frameworks**  
-![Python](https://img.shields.io/badge/Python-%2314354C.svg?style=flat&logo=python&logoColor=white)  
-![SQL](https://img.shields.io/badge/SQL-%230074D9.svg?style=flat&logo=postgresql&logoColor=white)  
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=pytorch&logoColor=white)  
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=flat&logo=tensorflow&logoColor=white)  
-![LangChain](https://img.shields.io/badge/LangChain-%23007ACC.svg?style=flat)  
+**Retrieval evaluation results:**
 
-### **Cloud & Data Engineering**  
-![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=flat&logo=amazonaws&logoColor=white)  
-![Azure](https://img.shields.io/badge/Azure-%230072C6.svg?style=flat&logo=microsoftazure&logoColor=white)  
-![Snowflake](https://img.shields.io/badge/Snowflake-%2300B5E2.svg?style=flat&logo=snowflake&logoColor=white)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=flat&logo=postgresql&logoColor=white)  
+| Metric | Score |
+|--------|-------|
+| Recall@1 | 0.92 |
+| Recall@5 | 0.85 |
+| MRR | 0.67 |
+| NDCG@5 | 0.70 |
 
-### **MLOps & DevOps**  
-![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)  
-![Airflow](https://img.shields.io/badge/Apache_Airflow-%23017CEE.svg?style=flat&logo=apache-airflow&logoColor=white)  
-![MLflow](https://img.shields.io/badge/MLflow-%230A7EBB.svg?style=flat&logo=mlflow&logoColor=white)  
-![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326CE5.svg?style=flat&logo=kubernetes&logoColor=white)  
-
-### **Tools for NLP & LLMs**  
-![Hugging Face](https://img.shields.io/badge/HuggingFace-%23FFBF00.svg?style=flat&logo=huggingface&logoColor=white)  
-![OpenAI API](https://img.shields.io/badge/OpenAI-API-%23006EE6.svg?style=flat)  
-![Vector DB](https://img.shields.io/badge/FAISS-%2300A3E0.svg?style=flat)  
+→ [View repository](https://github.com/nithin-cherukumalli/policy-intelligence-platform)
 
 ---
 
-## **🌟 Why Work With Me?**  
-✔️ I bring a **unique combination** of **data science, engineering, and AI expertise**.  
-✔️ I build **scalable, production-ready AI/ML solutions** that solve real-world problems.  
-✔️ I have **hands-on experience with MLOps**, ensuring smooth model deployment & monitoring.  
-✔️ I stay up to date with **LLM advancements**, ensuring cutting-edge AI integration.  
-✔️ I’m passionate about **open-source contributions** and AI research.  
+### Multi-Tenant RAG Platform — BlastLearning
+> Production · AWS-native · Multi-tenant
+
+**AWS-native multi-tenant RAG platform** enabling multiple client organisations to upload proprietary documents, generate isolated vector databases, and retrieve personalised AI responses.
+
+**Architecture highlights:**
+- Tenant isolation via unique vector_db_ids, S3 bucket segregation, DynamoDB access control
+- LangGraph-based agentic RAG with dynamic prompt routing and metadata-aware retrieval
+- Serverless on Lambda + API Gateway — designed for horizontal scaling
+
+→ [View repository](https://github.com/nithin-cherukumalli/multi-tenant-rag-platform)
 
 ---
 
-## **📫 Connect with Me!**  
-[![LinkedIn]([https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/your-profile](https://www.linkedin.com/in/nithin-ch-7a478b21a/))  
-[![GitHub]([https://img.shields.io/badge/GitHub-%2312100E.svg?style=flat&logo=github&logoColor=white)](https://github.com/your-username](https://github.com/Nithin8919))  
-[![Twitter]([https://img.shields.io/badge/X-%231DA1F2.svg?style=flat&logo=x&logoColor=white)](https://twitter.com/your-handle](https://x.com/Nithin_74))  
+## Technical Stack
 
-🚀 Always open to collaborating on **exciting AI, NLP, and Data Science projects!**  
+```
+LLM Inference:      vLLM · HuggingFace Transformers · Ollama · llama.cpp
+RAG & Retrieval:    pgvector · Weaviate · FAISS · ChromaDB · BM25 · RRF fusion
+Reranking:          Cross-encoder · LLM-as-judge · MMR (sentence-transformers)
+Evaluation:         RAGAS · Recall@K · MRR · NDCG · Groundedness scoring
+Agent Frameworks:   LangGraph · LangChain · multi-agent orchestration
+Backend:            Python · FastAPI · REST APIs · GraphQL
+Cloud:              AWS (Lambda · S3 · DynamoDB · API Gateway · SageMaker)
+Infrastructure:     Docker · PostgreSQL · CI/CD · Airflow · MLflow
+AI Security:        Multi-tenant isolation · Prompt injection protection · Audit logging
+```
 
+---
+
+## Areas of Deep Focus
+
+**RAG Engineering**
+Hybrid retrieval architecture, chunking strategy design, three-stage reranking pipelines, retrieval evaluation frameworks, RAG failure analysis, hallucination debugging
+
+**On-Premise LLM Deployment**
+vLLM inference serving, KV cache optimisation, continuous batching, VRAM management, throughput vs latency tradeoffs, air-gapped network deployments
+
+**AI Governance & Security**
+Multi-tenant data isolation, prompt injection protection at the infrastructure layer, provenance tracking, compliance-aware pipeline design, audit logging for regulated environments
+
+**Agentic AI**
+LangGraph orchestration, multi-agent coordination, tool use, memory architecture, agent failure recovery, 11-agent production pipelines
+
+---
+
+## Currently Working On
+
+- QLoRA fine-tuning of domain-specific models on RTX 5090 with MLflow experiment tracking
+- LLM observability with self-hosted Langfuse on the government network
+- Kubernetes-based deployment patterns for AI inference services
+
+---
+
+## Writing
+
+Technical posts on production AI engineering:
+
+- [What I learned deploying an LLM on an air-gapped government network](#) *(coming soon)*
+- [How I improved RAG retrieval from Recall@5 0.61 to 0.85](#) *(coming soon)*
+
+---
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/nithin-cherukumalli-7a478b21a) · [Email](mailto:cherukumallinithin@gmail.com)
+
+Open to discussing **AI systems engineering roles** — remote or hybrid — in UAE, Europe, Singapore, or with global AI startups.
