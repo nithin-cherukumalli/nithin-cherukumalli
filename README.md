@@ -1,5 +1,5 @@
 
-# **👋 Hi, I'm Nithin!**  
+# **👋 Hi, I'm Nithin cherukumalli!**  
 
 🚀 **Full-Stack Data Scientist | Data Engineer | AI Engineer | MLOPs Enthusiast**  
 
